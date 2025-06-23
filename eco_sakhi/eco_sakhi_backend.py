@@ -30,6 +30,7 @@ def solar_live():
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 with open(os.path.join(BASE_DIR, 'knowledge_base.json'), 'r', encoding='utf-8') as f:
+    knowledge_base = json.load(f)  # <-- This line must be indented under the 'with'
 
 def get_best_match(query, choices, threshold=80):
     best_match = fuzz_process.extractOne(query, choices)
