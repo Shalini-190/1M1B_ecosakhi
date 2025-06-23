@@ -11,7 +11,7 @@ import threading
 from datetime import datetime
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from solar_data import get_monthly_solar_generation, get_karnataka_sldc_solar_data
+from .solar_data import get_monthly_solar_generation, get_karnataka_sldc_solar_data
 
 app = Flask(__name__)
 CORS(app)
