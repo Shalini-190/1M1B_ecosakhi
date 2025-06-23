@@ -1,7 +1,0 @@
-flask
-flask-cors
-transformers==4.29.2
-torch
-requests
-beautifulsoup4
-gunicorn
