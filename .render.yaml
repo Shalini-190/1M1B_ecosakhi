@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: eco-sakhi
+    env: python
+    plan: free
+    buildCommand: "pip install -r backend/requirements.txt"
+    startCommand: "python backend/eco_sakhi_backend.py"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10
+    autoDeploy: true
