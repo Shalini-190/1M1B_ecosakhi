@@ -12,6 +12,7 @@ from datetime import datetime
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from .solar_data import get_monthly_solar_generation, get_karnataka_sldc_solar_data
+import os
 
 app = Flask(__name__)
 CORS(app)
@@ -27,9 +28,8 @@ def solar_live():
     return jsonify({"type": "answer", "content": result})
 
 
-
-with open('knowledge_base.json', 'r', encoding='utf-8') as f:
-    knowledge_base = json.load(f)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+with open(os.path.join(BASE_DIR, 'knowledge_base.json'), 'r', encoding='utf-8') as f:
 
 def get_best_match(query, choices, threshold=80):
     best_match = fuzz_process.extractOne(query, choices)
