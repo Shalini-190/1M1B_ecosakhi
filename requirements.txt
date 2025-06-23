@@ -4,3 +4,4 @@ transformers>=4.35.0
 tokenizers>=0.15.1
 beautifulsoup4
 requests
+gunicorn
