@@ -1,6 +1,6 @@
 flask
 flask-cors
-transformers==4.29.2
+tokenizers==0.13.3
 torch
 requests
 beautifulsoup4
