@@ -1,7 +1,0 @@
-flask
-flask-cors
-tokenizers==0.13.3
-torch
-requests
-beautifulsoup4
-gunicorn
